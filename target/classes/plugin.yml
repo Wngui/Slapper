@@ -1,0 +1,21 @@
+name: Slapper
+version: 1
+author: WnGui
+main: dk.wngui.slapper.Main
+description: Slap your homies off the edge.
+api-version: 1.16
+permissions:
+  slap.start:
+    description: Grants permission to start the hunt.
+    default: op
+  slap.*:
+    description: Grants all slapper perms.
+    default: false
+    children:
+      hunt.start: true
+
+commands:
+  slap:
+    description: Starts the slapping.
+    usage: /slap
+    permission: slap.start
